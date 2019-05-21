@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment</title>
+	
+<script type="text/javascript">
+function fillAdd()
+{
+	var checkBox = document.getElementById("chk");
+	//console.log(checkBox);
+	if (checkBox.checked == true)
+	{
+		var present = document.getElementById('preadd');
+		var parmanent = document.getElementById('paradd');
+		parmanent.value = present.value;
+	}
+	else
+	{
+		empty=document.getElementById('paradd');
+		empty.value="";
+	}
+}
+</script>
+</head>
+<body>
+
+<b>Present Address</b>
+<br><br>
+<form>
+Address:
+<input type="text" id="preadd">
+<br>
+<input type="checkbox" id="chk" name="add" onclick="fillAdd()">
+<em>Check this box if Present Address and Permanent Address are the same.</em>
+<P>
+<b>Parmanent Address</b>
+<br><br>
+Address:
+<input type="text" id="paradd">
+</form>
