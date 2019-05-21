@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>check</title>
+	<style type="text/css">
+		p{
+			color: purple;
+			font-size: 20px;
+			font-family: monospace;
+		}
+		.btn 
+		{
+			color: white;
+			background-color: purple;
+
+
+		}
+	</style>
+	<script type="text/javascript">    
+	function check() 
+	{
+		 
+	
+		var posn = 0;    
+		var numbr = -1;    
+		var j = -1;    
+		var para =  document.getElementById('demo').innerHTML;
+		  
+		var findWord = document.getElementById('txtpass').value;  
+    
+		while (posn != -1)  
+		{    
+		    posn = para.indexOf(findWord, j + 1);    
+		    numbr += 1;    
+		    j = posn;    
+		}    
+		    
+		document.getElementById("abc").innerHTML = "The occurance of "+findWord + " is: "+ numbr;
+		console.log(findWord);   
+	}
+</script>  
+</head>
+<body>
+<p id="demo">CSM Technologies is an IT consulting, business services, software solutions developer and outsourcing company, serving clients in diversified and challenging territories across the Middle East and North Africa (MENA) region with a proven track record of almost two decades.
+
+With ‘technology for the people’ at the core of its ethos and spirit, CSM found its calling in helping Governments to adopt e-Governance solutions for efficient and transparent service delivery and to enhance access and accountability. The organization has designed, developed and implemented more than 100 sector wide solutions in mining, education, transport, land allotment, infrastructure etc. for governments enabling multi-billion dollar transactions.
+
+With an extensive portfolio of products, smart legacy modernization services and matchless consulting, CSM is well respected for being the first to many unexplored business opportunities. Its ability to deliver big-data solutions in real time to millions of users is unparalleled.
+
+For organizations and business, CSM integrates enterprise resources management through its built-to-purpose solutions. CSM is ideally positioned to offer global solutions through its offices in Dubai and across India.</p>
+<button id="btn" onclick="check()">Click to check</button>
+<input type="text" name="" id="txtpass">
+<p id="abc"></p>
+
+
+
+</body>
+</html>
